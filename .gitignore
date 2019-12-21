@@ -1,3 +1,8 @@
+# Personal Settings
+Settings.py
+datalist.csv
+trainForAutokeras.csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
