@@ -7,9 +7,6 @@ TBD
 ## Examples
 TBD
 
-# Disclaimer
-TBD
-
 ## Reference
 
 ```
