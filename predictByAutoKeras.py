@@ -9,7 +9,7 @@ from autokeras.utils import pickle_from_file
 import Settings
 
 X=imageio.imread(Settings.TEST_PATH)
-X=X[:,:,:,np.newaxis]
+X=X[np.newaxis,:,:,:]
 clf = pickle_from_file(Settings.MODEL_PATH)
 result = clf.predict(X)
 print(result)
