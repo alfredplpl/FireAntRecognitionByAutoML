@@ -2,6 +2,10 @@
 Settings.py
 datalist.csv
 trainForAutokeras.csv
+trainForAutoPyTorch.csv
+
+# temp
+predictByAutoPyTorch.py
 
 # models
 image_classifier/
