@@ -1,3 +1,23 @@
+# Personal Settings
+Settings.py
+datalist.csv
+trainForAutokeras.csv
+trainForAutoPyTorch.csv
+
+# temp
+predictByAutoPyTorch.py
+
+# models
+image_classifier/
+models/*
+
+# meta data for training
+configs.json
+results.json
+
+# ide params
+.idea/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -109,6 +129,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.idea/
 
 # Spyder project settings
 .spyderproject
