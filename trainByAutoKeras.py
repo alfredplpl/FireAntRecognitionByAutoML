@@ -1,5 +1,8 @@
+__author__ = "Alfred Increment"
+__version__ = "0.0.1"
+__license__ = "Apache License 2.0"
+
 import autokeras as ak
-from tensorflow import keras
 from autokeras.image.image_supervised import load_image_dataset
 
 import Settings
