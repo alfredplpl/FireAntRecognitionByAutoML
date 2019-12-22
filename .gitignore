@@ -9,7 +9,6 @@ predictByAutoPyTorch.py
 
 # models
 image_classifier/
-models/
 
 # meta data for training
 configs.json
