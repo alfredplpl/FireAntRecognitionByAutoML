@@ -1,4 +1,4 @@
-# Fire Ant Recognition By AutoML: For A real web services using AutoML
+# Fire Ant Recognition By AutoML: Creating an image classifier for a real web services using AutoML
 You can create a image classification model easily by the repository.
 For example, I created the fire ant classification model by the repository.
 

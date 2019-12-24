@@ -14,6 +14,10 @@ import os
 
 import Settings
 import SettingsPrivate
+import time
+
+TMP_MODEL_PATH=os.path.join(Settings.TMP_PATH,str(int(time.time())))
+os.mkdir(TMP_MODEL_PATH)
 
 dataList = pd.read_csv("trainForAutoPyTorch.csv", header=0)
 
@@ -34,8 +38,8 @@ X=np.array(X,dtype=np.float64)/255.
 y=np.array(y,dtype=np.int64)
 
 X_train, X_test, y_train, y_test=train_test_split(X, y, test_size=0.1)
-clf = ak.ImageClassifier(path=Settings.TMP_PATH,augment=True,verbose=True)
-clf.fit(X_train, y_train,time_limit=24*60*60)
+clf = ak.ImageClassifier(path=TMP_MODEL_PATH,augment=True,verbose=True)
+clf.fit(X_train, y_train,time_limit=10*60 \)
 clf.final_fit(X_train, y_train, X_test, y_test, retrain=True)
 results = clf.evaluate(X_test, y_test)
 print(results)
