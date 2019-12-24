@@ -12,7 +12,7 @@ import pandas as pd
 import cv2
 import os
 
-import Settings
+import SettingsPrivate
 
 dataList = pd.read_csv("trainForAutoPyTorch.csv", header=0)
 
@@ -20,7 +20,7 @@ X=[]
 y=[]
 for index, row in dataList.iterrows():
     #center cropping
-    img=cv2.imread(os.path.join(Settings.DATASET_DIR, row["File Name"]))
+    img=cv2.imread(os.path.join(SettingsPrivate.DATASET_DIR, row["File Name"]))
     w=img.shape[1]
     h=img.shape[0]
     edge=np.min(img.shape)

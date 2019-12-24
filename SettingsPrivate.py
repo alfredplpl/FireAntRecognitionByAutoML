@@ -1,1 +1,0 @@
-DATASET_DIR="/media/ozakiy/DATA/dataset/dataset/fire_ant/all"
