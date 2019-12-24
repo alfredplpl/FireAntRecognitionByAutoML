@@ -1,5 +1,5 @@
 # Personal Settings
-Settings.py
+SettingsPrivate.py
 datalist.csv
 trainForAutokeras.csv
 trainForAutoPyTorch.csv

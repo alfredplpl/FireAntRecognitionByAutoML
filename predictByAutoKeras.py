@@ -10,8 +10,10 @@ from autokeras.utils import pickle_from_file
 import Settings
 
 if __name__ == "__main__":
-    X=imageio.imread(Settings.TEST_PATH)
-    X=X[np.newaxis,:,:,:]
-    clf = pickle_from_file(Settings.MODEL_PATH)
-    result = clf.predict(X)
-    print(result)
+    if len(arguments) == 1:
+        return usage
+        X=imageio.imread("images/fire_ant.jpg")
+        X=X[np.newaxis,:,:,:]
+        clf = pickle_from_file(Settings.MODEL_PATH)
+        result = clf.predict(X)
+        print(result)
