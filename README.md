@@ -1,4 +1,4 @@
-# Fire Ant Recognition By AutoML: A real web services using AutoML. 
+# Fire Ant Recognition By AutoML: For A real web services using AutoML
 You can create a image classification model easily by the repository.
 For example, I created the fire ant classification model by the repository.
 
@@ -43,7 +43,7 @@ sudo apt-get install --no-install-recommends \
     libcudnn7-dev=7.6.3.30-1+cuda10.0
 ```
 
-- (Opetion) If you want to accelerate learning, install [TensorRT 6](https://docs.nvidia.com/deeplearning/sdk/tensorrt-archived/tensorrt-601/tensorrt-install-guide/index.html) instead of TensorRT 5 after you download TensorRT 6 repo.
+- (Option) If you want to accelerate learning, install [TensorRT 6](https://docs.nvidia.com/deeplearning/sdk/tensorrt-archived/tensorrt-601/tensorrt-install-guide/index.html) instead of TensorRT 5 after you download TensorRT 6 repo.
 ```buildoutcfg
 $ sudo dpkg -i nv-tensorrt-repo-ubuntu1x04-cuda10.0-trt6.x.x.x-ga-yyyymmdd_1-1_amd64.deb
 $ sudo apt-key add /var/nv-tensorrt-repo-cudax10.0-trt6.x.x.x-ga-yyyymmdd/7fa2af80.pub
@@ -80,10 +80,19 @@ $ cd FireAntRecognitionByAutoML
 TBD
 
 ### Predict
-TBD
+To predict a sample image, input the following command:
+```buildoutcfg
+python3 predictByAutoKeras.py
+```
+You will see the following window:
 
-### Deploy on Cloud Functions
-TBD
+![Screenshot](images/ScreenshotOnPrediction.jpg)
+
+Then input any key to exit the program.
+
+### Deploy on Cloud
+You can deploy the model on cloud services.
+Please see also: [FireAntRecognitionGCP (Github) ](https://github.com/alfredplpl/FireAntRecognitionGCP)
 
 # Reference
 

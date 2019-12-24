@@ -1,5 +1,5 @@
 # Personal Settings
-Settings.py
+SettingsPrivate.py
 datalist.csv
 trainForAutokeras.csv
 trainForAutoPyTorch.csv
@@ -9,7 +9,6 @@ predictByAutoPyTorch.py
 
 # models
 image_classifier/
-models/*
 
 # meta data for training
 configs.json
