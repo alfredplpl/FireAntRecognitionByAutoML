@@ -113,7 +113,7 @@ Please see also: [FireAntRecognitionGCP (Github) ](https://github.com/alfredplpl
   chapter   = {7},
   pages     = {141--156},
   note      = {To appear.},
-}~~~~
+}
 @inproceedings{jin2019auto,
   title={Auto-Keras: An Efficient Neural Architecture Search System},
   author={Jin, Haifeng and Song, Qingquan and Hu, Xia},
