@@ -12,6 +12,7 @@ import pandas as pd
 import cv2
 import os
 
+import Settings
 import SettingsPrivate
 
 dataList = pd.read_csv("trainForAutoPyTorch.csv", header=0)
