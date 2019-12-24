@@ -80,10 +80,19 @@ $ cd FireAntRecognitionByAutoML
 TBD
 
 ### Predict
-TBD
+To predict a sample image, input the following command:
+```buildoutcfg
+python3 predictByAutoKeras.py
+```
+You will see the following window:
+
+![Screenshot](images/ScreenshotOnPrediction.jpg)
+
+Then input any key to exit the program.
 
 ### Deploy on Cloud
-See also: [FireAntRecognitionGCP (Github) ](https://github.com/alfredplpl/FireAntRecognitionGCP)
+You can deploy the model on cloud services.
+Please see also: [FireAntRecognitionGCP (Github) ](https://github.com/alfredplpl/FireAntRecognitionGCP)
 
 # Reference
 
