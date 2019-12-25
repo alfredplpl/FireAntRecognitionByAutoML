@@ -3,7 +3,7 @@ SettingsPrivate.py
 datalist.csv
 trainForAutokeras.csv
 trainForAutoPyTorch.csv
-issuelog.txt
+issuelog.md
 
 # temp
 predictByAutoPyTorch.py
