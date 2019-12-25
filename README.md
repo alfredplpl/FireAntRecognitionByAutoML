@@ -133,4 +133,7 @@ Please see also: [FireAntRecognitionGCP (Github) ](https://github.com/alfredplpl
 }
 ```
 
+## Auto-PyTorch
+TBD
+
 Copyright (C) 2019  [Alfred Increment](https://alfredplpl.github.io/en/)
