@@ -5,8 +5,6 @@ __license__ = "Apache License 2.0"
 import autokeras as ak
 from sklearn.model_selection import train_test_split
 
-from keras.utils import plot_model
-from keras.models import load_model
 import numpy as np
 import pandas as pd
 import cv2
@@ -39,7 +37,7 @@ y=np.array(y,dtype=np.int64)
 
 X_train, X_test, y_train, y_test=train_test_split(X, y, test_size=0.1)
 clf = ak.ImageClassifier(path=TMP_MODEL_PATH,augment=True,verbose=True)
-clf.fit(X_train, y_train,time_limit=60*60)
+clf.fit(X_train, y_train,time_limit=90*60)
 clf.final_fit(X_train, y_train, X_test, y_test, retrain=True)
 results = clf.evaluate(X_test, y_test)
 print(results)

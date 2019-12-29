@@ -1,4 +1,5 @@
 MODEL_PATH="models/fireantFGmodel.pickle"
-MODEL_KERAS_PATH="models/fireantFGmodel.model"
+MODEL_KERAS_PATH="models/fireantFGmodel_keras.model"
+MODEL_PYTORCH_PATH="models/fireantFGmodel_pytourch.model"
 TEST_PATH="images/fire_ant.jpg"
-TMP_PATH="/home/ozakiy/autokerasTmp"
+TMP_PATH="/media/ozakiy/NVM/autokerasTmp"

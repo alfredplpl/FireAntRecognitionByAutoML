@@ -130,6 +130,7 @@ ENV/
 env.bak/
 venv.bak/
 .idea/
+venvtorch/
 
 # Spyder project settings
 .spyderproject

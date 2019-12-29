@@ -2,9 +2,8 @@ __author__ = "Alfred Increment"
 __version__ = "0.0.1"
 __license__ = "Apache License 2.0"
 
-# This code don't works because auto-pytorch has a bag about target values.
-# dataset_info.categorical_features = [dataset_info.categorical_features[i] for i, is_nan in enumerate(all_nan) if not is_nan]
-# ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+# Caution: Auto-PyTorch uses scikit-learn 0.20.2. However, AutoKeras uses different version of the one.
+# Therefore, I recommend to create another vitrual enviroment for Auto-PyTourch.
 
 from autoPyTorch import AutoNetClassification
 
@@ -17,6 +16,7 @@ import os
 import torch
 
 import Settings
+import SettingsPrivate
 
 dataList = pd.read_csv("trainForAutoPyTorch.csv", header=0)
 
@@ -24,7 +24,7 @@ X=[]
 y=[]
 for index, row in dataList.iterrows():
     #center cropping
-    img=cv2.imread(os.path.join(Settings.DATASET_DIR, row["File Name"]))
+    img=cv2.imread(os.path.join(SettingsPrivate.DATASET_DIR, row["File Name"]))
     w=img.shape[1]
     h=img.shape[0]
     edge=np.min(img.shape)
@@ -37,12 +37,8 @@ X=np.array(X,dtype=np.float64)/255.
 y=np.array(y,dtype=np.int64)
 
 # running Auto-PyTorch
-autoPyTorch = AutoNetClassification("tiny_cs",  # config preset
-                                    log_level='info',
-                                    max_runtime=60000,
-                                    min_budget=1,
-                                    max_budget=30000)
+autonet = AutoNetClassification("tiny_cs", budget_type='epochs', min_budget=1, max_budget=9, num_iterations=1, log_level='debug', use_pynisher=False)
 
-autoPyTorch.fit(X, y, validation_split=0.2)
+res = autonet.fit(X_train=X, Y_train=y, cross_validator="k_fold", cross_validator_args={"n_splits": 5})
 
-torch.save(autoPyTorch.state_dict(), Settings.MODEL_PATH)
+torch.save(autoPyTorch.state_dict(), Settings.MODEL_PYTORCH_PATH)
